@@ -1,30 +1,33 @@
-# SCT_ML_2 – House Price Prediction (Linear Regression)
+# SCT_ML_2: House Price Prediction (Linear Regression)
 
-**Task:** Implement a linear regression model to predict house prices from square footage, number of bedrooms and number of bathrooms.
-**Dataset:** House Price Dataset (link in the internship brief).
+Task 2 of the SkillCraft Technology Machine Learning internship.
 
-## Setup
-```bash
-pip install -r requirements.txt
-```
-Place the CSV at `data/house_prices.csv`. The script detects common column names (for example `sqft_living` or `Square_Footage`, `Bedrooms`, `Bathrooms`, `Price`) and reports clearly if one is missing.
+**Goal:** predict house sale prices from living area, bedrooms and bathrooms.
 
-## Run
-```bash
-python linear_regression.py --data data/house_prices.csv
-python linear_regression.py --predict 2000 3 2     # predict price for 2000 sq ft, 3 beds, 2 baths
-```
+**Dataset:** House Prices (Ames housing), `train.csv`. The columns used are `GrLivArea` (square footage), `BedroomAbvGr` (bedrooms), `FullBath` (bathrooms) and `SalePrice` (target). Only full bathrooms are used, since the dataset has no half-bath count.
 
 ## Method
-1. Load the data, keep the four required columns and drop rows with missing values.
-2. Split 80% train / 20% test (`random_state=42`).
-3. Fit `LinearRegression` on the three features.
-4. Evaluate with MAE, RMSE and R².
-
-## Outputs (`outputs/`)
-- `metrics.txt`: MAE, RMSE, R² and model coefficients
-- `actual_vs_predicted.png`: scatter plot of actual against predicted prices
-- `linear_regression_model.joblib`: saved model
+1. Select and rename the four columns.
+2. Drop rows with missing values.
+3. Split 80% train / 20% test (`random_state=42`).
+4. Fit `LinearRegression` on the three features.
+5. Evaluate with MAE, RMSE and R².
 
 ## Results
-Fill in after running: MAE ____  RMSE ____  R² ____
+| Metric | Value |
+|---|---|
+| MAE | [value] |
+| RMSE | [value] |
+| R² | [value] |
+
+Coefficients are in `outputs/metrics.txt`. `outputs/actual_vs_predicted.png` plots predicted against actual prices.
+
+## How to run
+1. Open `SCT_ML_2.ipynb` in Google Colab (File → Upload notebook, or open it from GitHub).
+2. Upload `train.csv` to the Colab Files panel, renamed `house_prices.csv` if you used that name.
+3. Run all cells (Runtime → Run all).
+
+## Files
+- `SCT_ML_2.ipynb`: Colab notebook with the full run and outputs
+- `linear_regression.py`: the same code as a script
+- `outputs/`: metrics, plot and saved model
