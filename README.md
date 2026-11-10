@@ -1,4 +1,4 @@
-# SCT_ML_3– House Price Prediction (Linear Regression)
+# SCT_ML_2 – House Price Prediction (Linear Regression)
 
 **Task:** Implement a linear regression model to predict house prices from square footage, number of bedrooms and number of bathrooms.
 **Dataset:** House Price Dataset (link in the internship brief).
