@@ -16,9 +16,9 @@ Task 2 of the SkillCraft Technology Machine Learning internship.
 ## Results
 | Metric | Value |
 |---|---|
-| MAE | [value] |
-| RMSE | [value] |
-| R² | [value] |
+| MAE | [35,788.06] |
+| RMSE | [ 52,975.72] |
+| R² | [0.6341] |
 
 Coefficients are in `outputs/metrics.txt`. `outputs/actual_vs_predicted.png` plots predicted against actual prices.
 
